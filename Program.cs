@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace cs_lab02
 {
@@ -6,9 +7,34 @@ namespace cs_lab02
     {
     static void Main(string[] args)
     {
-        Krok1();
+        //Krok1();
+        Krok2();
     }
+    static void Krok2(){
+        var lista = new List<Pracownik>();
+        lista.Add( new Pracownik("CCC", new DateTime(2010, 10, 02), 1050 ) );
+        lista.Add( new Pracownik("AAA", new DateTime(2010, 10, 01), 100 ) );
+        lista.Add( new Pracownik("DDD", new DateTime(2010, 10, 03), 2000 ) );
+        lista.Add( new Pracownik("AAA", new DateTime(2011, 10, 01), 1000 ) );
+        lista.Add( new Pracownik("BBB", new DateTime(2010, 10, 01), 1050 ) );
 
+        Console.WriteLine("-- Wariant 1 --");
+        foreach( var pracownik in lista )
+        Console.WriteLine( pracownik );
+
+        Console.WriteLine("-- Wariant 2 --");
+        lista.ForEach( (p) => {Console.Write(p + ",");} );
+        Console.WriteLine(   );
+
+        Console.WriteLine("-- Wariant 3 --");
+        Console.WriteLine( string.Join('\n', lista) );
+
+        lista.Sort(); //zadziała, jeśli klasa Pracownik implementuje IComparable<Pracownik>
+
+        Console.WriteLine("Po posortowaniu:");
+        foreach( var pracownik in lista )
+            Console.WriteLine( pracownik );
+    }
     static void Krok1()
     {
         Console.WriteLine("--- Sprawdzenie poprawności tworzenia obiektu ---");

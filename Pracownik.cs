@@ -4,6 +4,10 @@ namespace cs_lab02
 {
     public class Pracownik : IEquatable<Pracownik>
     {
+        #region implementacja IComparable<Pracownik>
+
+        #endregion implementacja IComparable<Pracownik>
+        
         #region implementacja IEquatable<Pracownik>
 
             public bool Equals(Pracownik other)
