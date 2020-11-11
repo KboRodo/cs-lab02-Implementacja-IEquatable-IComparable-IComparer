@@ -1,6 +1,6 @@
 using System;
 
-namespace Pracownicy
+namespace cs_lab02
 {
     public class Pracownik
     {
@@ -28,9 +28,9 @@ namespace Pracownicy
             {DataZatrudnienia:d MMM yyyy}, {Wynagrodzenie} PLN)";
         
         public Pracownik(string nazwisko, DateTime dataZatrudnienia, decimal wynagrodzenie){
-            Nazwisko=nazwisko
-            DataZatrudnienia=dataZatrudnienia
-            Wynagrodzenie=wynagrodzenie
+            Nazwisko=nazwisko;
+            DataZatrudnienia=dataZatrudnienia;
+            Wynagrodzenie=wynagrodzenie;
         }
         public Pracownik(){
             Nazwisko="Anonim"
