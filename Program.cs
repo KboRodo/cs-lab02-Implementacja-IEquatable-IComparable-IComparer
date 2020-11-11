@@ -43,6 +43,5 @@ namespace cs_lab02
         Console.WriteLine($"p1.Equals(p3): {p1.Equals(p4)}");
         Console.WriteLine($"p1 == p4: {p1 == p4}");
     }
-}
     }
 }
